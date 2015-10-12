@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #3F96BF;
+  color: #193C4C;
+  padding: 20px;
+  width: 80%;
+}
+
+h1 {
+  text-align: center;
+  color: #4B0082;
+  font-size: 3em;
+}
+
+a:hover {
+  color: #FFFFFF;
+  font-size: 1em;
+}
+
+ul li {
+  font-size: 1em;
+}

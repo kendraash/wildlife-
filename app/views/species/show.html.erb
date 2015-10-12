@@ -1,14 +1,16 @@
 <h1><%= @species.name %></h1>
 
-<p><%= link_to "Return to Species List", species_index_path %></p>
 
 
 <ul>
   <% @species.sightings.each do |sighting| %>
-    <li><%= sighting.animal %> | <%= sighting.date %>
-    <p><%= link_to "Edit", edit_species_path(@species) %></p>
-    <p><%= link_to "Delete", species_path(@species), :data => {:confirm => "You sure?", :method => "delete"} %></p> </li>
+    <li><%= sighting.animal %> | <%= sighting.date.strftime("%B %d, %Y") %>
+   </li>
   <%end%>
 </ul>
 
+<p><%= link_to "Edit", edit_species_path(@species) %></p>
+<p><%= link_to "Delete", species_path(@species), :data => {:confirm => "You sure?", :method => "delete"} %></p>
+
+<p><%= link_to "Return to Species List", species_index_path %></p>
 <p><%= link_to "Add a Sighting", new_species_sighting_path(@species) %></p>
