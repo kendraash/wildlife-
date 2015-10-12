@@ -1,0 +1,20 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: wildlife_development
+
+test:
+  <<: *default
+  database: wildlife_test
+
+
+production:
+  <<: *default
+  database: wildlife_production
+  username: wildlife
+  password: <%= ENV['EXAMPLE_DATABASE_PASSWORD'] %>
