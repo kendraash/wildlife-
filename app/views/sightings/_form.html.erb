@@ -1,0 +1,14 @@
+
+<%= render "layouts/errors", :object => @sighting %>
+
+<%= form_for [@species, @sighting] do |f| %>
+  <%= f.label :animal %>
+  <%= f.text_field :animal %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+  <%= f.label :latitude %>
+  <%= f.text_field :latitude %>
+  <%= f.label :longitude %>
+  <%= f.text_field :longitude %>
+  <%= f.submit  %>
+<% end %>
